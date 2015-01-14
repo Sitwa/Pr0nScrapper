@@ -2,7 +2,7 @@ package pl.brawura.logic;
 
 import org.jsoup.nodes.Element;
 import org.jsoup.select.Elements;
-import pl.brawura.comment.CommentDateConverter;
+import pl.brawura.convert.DateConverter;
 import pl.brawura.models.Comment;
 
 import java.util.ArrayList;
@@ -29,7 +29,7 @@ public class CommentsReader {
         Element authorLine = authorLineSection.children().first();
         String date = authorLine.ownText();
         String author = authorLine.children().first().text();
-        CommentDateConverter dateConverter = new CommentDateConverter();
+        DateConverter dateConverter = new DateConverter();
         comment.setAuthor(author);
         comment.setDate(dateConverter.convertDate(date));
         return comment;

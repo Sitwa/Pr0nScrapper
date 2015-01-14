@@ -1,4 +1,4 @@
-package pl.brawura.comment;
+package pl.brawura.convert;
 
 import pl.brawura.properties.Constans;
 
@@ -10,7 +10,7 @@ import java.util.Date;
 /**
  * Created by Bartłomiej on 2015-01-11.
  */
-public class CommentDateConverter {
+public class DateConverter {
 
     public Date convertDate(String stringDate){
 
